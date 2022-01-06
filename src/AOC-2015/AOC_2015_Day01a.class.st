@@ -5,13 +5,13 @@ https://adventofcode.com/2015/day/1
 
 "
 Class {
-	#name : #'AOC_2015_Day01',
+	#name : #'AOC_2015_Day01a',
 	#superclass : #Object,
 	#category : #'AOC-2015'
 }
 
 { #category : #running }
-AOC_2015_Day01 >> run [
+AOC_2015_Day01a >> run [
 
 	"Find on which floor Santa is"
 
