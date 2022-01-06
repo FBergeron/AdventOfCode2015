@@ -15,9 +15,10 @@ Day01 >> run [
 
 	"Find on which floor Santa is"
 
-	| floor input inputStream |
+	| dir floor input inputStream |
+	dir := FileSystem disk workingDirectoryPath. 
 	floor := 0.
-	input := ')())())'.
+	input := (File named: (dir / 'AOC-2015-Input/Day01/input1.txt') pathString) readStream contents asString.
 	inputStream  := ReadStream on: input.
 	[ inputStream atEnd ] whileFalse: [ 
 		(inputStream peek = $() ifTrue: [ floor := floor + 1 ].
