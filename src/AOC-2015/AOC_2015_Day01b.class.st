@@ -1,3 +1,8 @@
+"
+Statement of the problem can be found here:
+
+https://adventofcode.com/2015/day/1
+"
 Class {
 	#name : #'AOC_2015_Day01b',
 	#superclass : #Object,

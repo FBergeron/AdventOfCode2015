@@ -16,7 +16,6 @@ AOC_2015_Day01a >> run [
 	"Find on which floor Santa is"
 
 	| repo dir floor input inputStream |
-	"dir := FileSystem disk workingDirectoryPath. "
 	repo := IceRepository registeredRepositoryIncludingPackage: self class package.
 	dir := repo location.
 	floor := 0.
