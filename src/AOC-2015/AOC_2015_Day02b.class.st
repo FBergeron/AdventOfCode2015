@@ -1,3 +1,9 @@
+"
+Statement of the problem can be found here:
+
+https://adventofcode.com/2015/day/2
+
+"
 Class {
 	#name : #'AOC_2015_Day02b',
 	#superclass : #Object,
@@ -16,14 +22,13 @@ AOC_2015_Day02b >> run [
 	input := (File named: (dir / 'src/input/Day02/input1.txt') pathString) readStream contents asString.
 	inputStream := ReadStream on: input.
 	[ (line := inputStream nextLine) isNil ] whileFalse: [ 
-		| measures length width height volume ribbon |
+		| measures length width height present |
 		measures := ('x' split: line) collect: [ :each | each asInteger ] .
 		length := measures at: 1.
 		width := measures at: 2.
 		height := measures at: 3.
-		volume := length * width * height.
-		ribbon := (2 * ((measures sorted) at: 1)) + (2 * ((measures sorted) at: 2)) + volume.
-		total := total + ribbon.
+		present := Present width: width height: height length: length.
+		total := total + present ribbon.
 	].
 	^ total
 ]

@@ -21,14 +21,13 @@ AOC_2015_Day02a >> run [
 	input := (File named: (dir / 'src/input/Day02/input1.txt') pathString) readStream contents asString.
 	inputStream := ReadStream on: input.
 	[ (line := inputStream nextLine) isNil ] whileFalse: [ 
-		| measures length width height wrapping |
+		| measures length width height present |
 		measures := ('x' split: line) collect: [ :each | each asInteger ] .
 		length := measures at: 1.
 		width := measures at: 2.
 		height := measures at: 3.
-		wrapping := (2 * length * width) + (2 * width * height) + (2 * height * length) + 
-			(((measures sorted) at: 1) * ((measures sorted) at: 2)). 
-		total := total + wrapping.
+		present := Present width: width height: height length: length.
+		total := total + present wrapping.
 	].
 	^ total
 ]
