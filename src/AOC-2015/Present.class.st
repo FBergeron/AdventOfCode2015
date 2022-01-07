@@ -14,7 +14,7 @@ Class {
 
 { #category : #accessing }
 Present class >> width: w height: h length: l [ 
-	"Create a present with no the specified physical properties."
+	"Create a present with the specified physical properties."
 			
 	| present |
 	present := self new.
