@@ -12,7 +12,7 @@ Class {
 { #category : #running }
 AOC_2015_Day04a >> run [
 
-	"Find the count of houses with at least one present."
+	"Find the right number that produces the right md5 hash."
 
 	| repo dir input inputStream prefix number md5 |
 	repo := IceRepository registeredRepositoryIncludingPackage: self class package.
